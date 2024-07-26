@@ -68,11 +68,11 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {featured.description}
                 </p>
-                <div className="absolute bottom-4 md:bottom-8">
+                {/* <div className="absolute bottom-4 md:bottom-8">
                   <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
                     Read more <span aria-hidden="true">&rarr;</span>
                   </p>
-                </div>
+                </div> */}
               </article>
             </Link>
           </Card>
@@ -102,11 +102,6 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {top2.description}
                 </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
-                </div>
               </article>
             </Link>
           </Card>
@@ -136,11 +131,6 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {top3.description}
                 </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
-                </div>
               </article>
             </Link>
           </Card>
@@ -170,11 +160,6 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {top4.description}
                 </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
-                </div>
               </article>
             </Link>
           </Card>
@@ -204,11 +189,6 @@ export default async function ProjectsPage() {
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {top5.description}
                 </p>
-                <div className="absolute bottom-4 md:bottom-8">
-                  <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                    Read more <span aria-hidden="true">&rarr;</span>
-                  </p>
-                </div>
               </article>
             </Link>
           </Card>
