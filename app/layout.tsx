@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     siteName: "bryancaraman.com",
     images: [
       {
-        url: "https://chronark.com/og.png",
+        url: "https://drive.google.com/uc?export=download&id=1NyvYaorVD9eNtkeS4oGVwV8yQ0QRctCa",
         width: 1920,
         height: 1080,
       },

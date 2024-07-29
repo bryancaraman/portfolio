@@ -9,9 +9,10 @@ export const revalidate = 60;
 export default async function ProjectsPage() {
   const featured = allProjects.find((project) => project.slug === "summarizer")!;
   const top2 = allProjects.find((project) => project.slug === "thrift")!;
-  const top3 = allProjects.find((project) => project.slug === "neurl")!;
-  const top4 = allProjects.find((project) => project.slug === "respondent")!;
-  const top5 = allProjects.find((project) => project.slug === "securify")!;
+  const top3 = allProjects.find((project) => project.slug === "socialsync")!;
+  const top4 = allProjects.find((project) => project.slug === "neurl")!;
+  const top5 = allProjects.find((project) => project.slug === "respondent")!;
+  const top6 = allProjects.find((project) => project.slug === "securify")!;
   const sorted = allProjects
     .filter((p) => p.published)
     .filter(
@@ -106,7 +107,8 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://www.youtube.com/shorts/VI_90eHESPU'}>
+            {/* <Link href={`/projects/${featured.slug}`}> */}
+            <Link href={'https://github.com/bryancaraman/Summarizer'}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -135,7 +137,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://github.com/acm-projects/Respondent'}>
+            <Link href={'https://www.youtube.com/shorts/VI_90eHESPU'}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -164,7 +166,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://github.com/bryancaraman/SecurifyChromeExtension'}>
+            <Link href={'https://github.com/acm-projects/Respondent'}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -188,6 +190,35 @@ export default async function ProjectsPage() {
                 </h2>
                 <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
                   {top5.description}
+                </p>
+              </article>
+            </Link>
+          </Card>
+          <Card>
+            <Link href={'https://github.com/bryancaraman/SecurifyChromeExtension'}>
+              <article className="relative w-full h-full p-4 md:p-8">
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-xs text-zinc-100">
+                    {top6.date ? (
+                      <time dateTime={new Date(top6.date).toISOString()}>
+                        {Intl.DateTimeFormat(undefined, {
+                          dateStyle: "medium",
+                        }).format(new Date(top6.date))}
+                      </time>
+                    ) : (
+                      <span>SOON</span>
+                    )}
+                  </div>
+                </div>
+
+                <h2
+                  id="featured-post"
+                  className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
+                >
+                  {top6.title}
+                </h2>
+                <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
+                  {top6.description}
                 </p>
               </article>
             </Link>
