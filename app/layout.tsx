@@ -64,6 +64,7 @@ export default function RootLayout({
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <title>Bryan Caraman</title>
+        <link rel="shortcut icon" href="/favicon.png" />
       </head>
       <body
         className={`bg-black ${process.env.NODE_ENV === "development" ? "debug-screens" : undefined
