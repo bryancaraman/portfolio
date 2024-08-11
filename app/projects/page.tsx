@@ -3,7 +3,7 @@ import React from "react";
 import { allProjects } from "contentlayer/generated";
 import { Navigation } from "../components/nav";
 import { Card } from "../components/card";
-import { Eye } from "lucide-react";
+import { Header } from "./[slug]/header";
 
 export const revalidate = 60;
 export default async function ProjectsPage() {
@@ -13,19 +13,6 @@ export default async function ProjectsPage() {
   const top4 = allProjects.find((project) => project.slug === "neurl")!;
   const top5 = allProjects.find((project) => project.slug === "respondent")!;
   const top6 = allProjects.find((project) => project.slug === "securify")!;
-  const sorted = allProjects
-    .filter((p) => p.published)
-    .filter(
-      (project) =>
-        project.slug !== featured.slug &&
-        project.slug !== top2.slug &&
-        project.slug !== top3.slug,
-    )
-    .sort(
-      (a, b) =>
-        new Date(b.date ?? Number.POSITIVE_INFINITY).getTime() -
-        new Date(a.date ?? Number.POSITIVE_INFINITY).getTime(),
-    );
 
   return (
     <div className="relative pb-16">
@@ -43,8 +30,7 @@ export default async function ProjectsPage() {
 
         <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2 ">
           <Card>
-            {/* <Link href={`/projects/${featured.slug}`}> */}
-            <Link href={'https://github.com/bryancaraman/Summarizer'}>
+            <Link href={`/projects/${featured.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -78,7 +64,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://github.com/bryancaraman/bootcamp-shopping-cart'}>
+            <Link href={`/projects/${top2.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -107,8 +93,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            {/* <Link href={`/projects/${featured.slug}`}> */}
-            <Link href={'https://github.com/bryancaraman/Summarizer'}>
+            <Link href={`/projects/${top3.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -137,7 +122,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://www.youtube.com/shorts/VI_90eHESPU'}>
+          <Link href={`/projects/${top4.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -166,7 +151,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://github.com/acm-projects/Respondent'}>
+            <Link href={`/projects/${top5.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">
@@ -195,7 +180,7 @@ export default async function ProjectsPage() {
             </Link>
           </Card>
           <Card>
-            <Link href={'https://github.com/bryancaraman/SecurifyChromeExtension'}>
+            <Link href={`/projects/${top6.slug}`}>
               <article className="relative w-full h-full p-4 md:p-8">
                 <div className="flex items-center justify-between gap-2">
                   <div className="text-xs text-zinc-100">

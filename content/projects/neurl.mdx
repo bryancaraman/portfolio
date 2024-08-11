@@ -2,8 +2,27 @@
 title: Neurl
 description: Hardware glove and mobile app that assists in rehabilitation of the hand after nerve damage.
 date: "2023-10-29"
-url: https://www.youtube.com/shorts/VI_90eHESPU
 published: true
 ---
 
-https://www.youtube.com/shorts/VI_90eHESPU
+General details:
+-
+
+For UC Berkeley's hackathon, our team realized there was a major gap in physical function after patients suffer a stroke. Even after going through a stroke, there is often nerve damage in the hand which completely takes away physical function.
+
+So we came up with a way to aid patients after this trauma:
+- Developed a glove using arduinos that assists in rehabilitation of the hand after nerve damage
+- Automates hand exercises based on the nerve damage and user strength
+- Measures each finger's individual strength as well as total strength to target specific muscles and showcase growth over time
+
+Check out a video of our first (very basic) prototype: https://www.youtube.com/shorts/VI_90eHESPU
+
+How we built it:
+-
+- Created a glove with a motor and pully system, powered by Arduinos, that could automate hand
+exercises
+- Implemented graphviz using Java for finger-specific data visualization, developed a weight-based
+backtracking algorithm for targeting weaker muscles by analyzing each finger’s individual strength, as
+well as the Android Canvas API for user interface development
+- Integrated all development to create an android app that displays the data, allows users to see progress,
+and lets users pick their exercises

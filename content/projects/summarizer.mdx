@@ -6,5 +6,22 @@ url: https://github.com/bryancaraman/Summarizer
 published: true
 ---
 
-https://github.com/bryancaraman/Summarizer
+Getting started:
+-
+With our slack bot, all you have to do is type /summarize and specify how long you want to go back in order to get a summary of all the messages in a channel within that time! 
 
+Or, you can even schedule summaries to be posted daily or weekly!
+
+With every summary, links to the first message in each conversation are provided. This way, you can navigate quicker to important conversations and read through individual messages.
+
+Example summary:
+-
+
+![](/summarizer.png)
+
+How I built it:
+-
+- Built the overarching slack app as well as the UI using Python in the Slack Bolt framework.
+- Utilized the Slack API to pull slack channel history, and the GoDaddy CaaS API with a ChatGPT 3.5-Turbo model to summarize messages using AI.
+- Developed an algorithm for time manipulation with obtaining channel history as well as displaying scheduled summaries.
+- Achieved a 99.8% positivity rate for summaries as well as up to an 800% increase in summarization speed through multi-channel threading.

@@ -6,4 +6,18 @@ url: https://github.com/bryancaraman/SecurifyChromeExtension
 published: true
 ---
 
-https://github.com/bryancaraman/SecurifyChromeExtension
+General details:
+-
+
+Our team of 4 had recently discovered a major phishing problem affecting students at our school just before we headed to UT Austin's hackathon. 
+
+We tackled this problem by building Securify: A chrome extension that protects users from phishing/scam emails
+
+- provides a colored indicator next to emails in a user's inbox indicating whether an email may be malicious or safe 
+- allows users to report suspicious emails so that other users are informed of similar malicious emails
+
+How we built it:
+-
+- Utilized the Django framework with Python to build the back-end for the reporting system, and MonogDB to store the data for reported emails
+- Built the front-end of the chrome extension with JavaScript, and CSS to provide an indicator whether inbox emails have been reported by institutions or users as malicious
+- Implemented the algorithm blending user reports and institution blacklists to flag suspicious emails

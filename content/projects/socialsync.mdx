@@ -5,4 +5,28 @@ date: "2024-07-16"
 published: true
 ---
 
-https://github.com/bryancaraman/SecurifyChromeExtension
+General details:
+-
+Our team of 6 revamped the GoDaddy Social Sync page to better fit customer's expectations for their social media presence, winning the GoDaddy internal hackathon!
+
+The original page only allowed users to pick from 4 AI generated social media usernames that would repeat after generating new recommendations and often be taken on all social media platforms.
+
+Our rebuilt page gave the user 8 username options that were:
+- available on all social media platforms
+- unique for every new generation
+
+as well as the ability to 
+- filter usernames by their availability on certain platforms the user is interested in
+- pin usernames so they stay for the next generation
+
+Final redevelopment: 
+
+![](/social.png)
+
+How we built it:
+-
+- Adjusted GoCaaS API request parameters to include a state of all previously generated names so everything was unique
+- Built an algorithm using JavaScript to make quick API requests to all social media platforms, figuring out whether usernames were taken and continuing until there were 8 available names
+- Cleaned up the UI using GoDaddy components to display all 8 options as well as "exact match" and "available across all available selected platforms" banners
+- Added filtering on the page so that the algorithm would only make requests to selected platforms
+- Increased efficiency of GoCaaS API request to ChatGPT 3.5-Turbo AI model by 150%
